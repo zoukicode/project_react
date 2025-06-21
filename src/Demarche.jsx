@@ -10,9 +10,8 @@ import learning from './assets/Learning-pana.svg';
 export function Demarche() {
   return (
     <section id="demarche" className="py-16 px-6">
-      <h2 className="text-center text-2xl font-bold text-[#e7009a] mb-10">
-        Notre démarche
-      </h2>
+   <h1 className="font-bold text-2xl">Notre démarche</h1>
+             <p className='lg:w-[60%] mx-auto'>Fémininité sans abri lutte contre la précarité en distribuant des kits d’hygiène aux plus démunies.</p>
       <ActionsSection />
     </section>
   );
