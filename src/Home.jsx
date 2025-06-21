@@ -40,7 +40,7 @@ export function Home() {
   const [chargement , setchargement] = useState(false);
 
   return (
-    <section className='flex flex-col gap-10'>
+    <section className='flex flex-col gap-20'>
 
       {/* -------- HEADER -------- */}
       <header className="flex justify-between items-center w-[90%] mx-auto">
@@ -91,7 +91,7 @@ export function Home() {
       </header>
 
       {/* -------- SECTION DE PRÉSENTATION -------- */}
-      <section id='qui_somme_nous' className="lg:flex-row flex flex-col gap-10 flex-col-reverse justify-around items-center">
+      <section id='qui_somme_nous' className="lg:flex-row flex flex-col gap-40 flex-col-reverse justify-around items-center">
         
         {/* Texte d’introduction avec animation à l'apparition */}
         <motion.div
@@ -187,8 +187,7 @@ export function Home() {
       </section>
 
       {/* -------- SECTION : NOTRE DÉMARCHE -------- */}
-      <section className='flex flex-col gap-10' id="demarche">
-      
+      <section className='flex flex-col gap-10' >     
 
         {/* Composant Démarche */}
         <div><Demarche /></div>

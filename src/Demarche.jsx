@@ -11,7 +11,6 @@ export function Demarche() {
   return (
     <section id="demarche" className="px-6">
    <h1 className="font-bold text-2xl">Notre démarche</h1>
-             <p className='lg:w-[60%] mx-auto'>Fémininité sans abri lutte contre la précarité en distribuant des kits d’hygiène aux plus démunies.</p>
       <ActionsSection />
     </section>
   );
