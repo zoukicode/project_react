@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 export function Compte() {
   return (
     <div className="py-16 px-6" id="compte">
-      <h1 className="font-bold text-2xl text-center mb-10 text-[#e7009a]">
+      <h1 className="font-bold text-2xl text-center ">
         Féminité sans abri, c'est aussi...
       </h1>
 

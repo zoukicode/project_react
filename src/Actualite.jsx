@@ -33,7 +33,7 @@ export function Actualite() {
       </h1>
 
       {/* Texte d’introduction */}
-      <p className="lg:w-[60%]">
+      <p className="lg:w-[60%] mx-auto">
         S'engager aux côtés des féminités sans abri, c'est permettre à l'association de continuer à bénéficier de soutien tout au long de l'année pour assurer ses missions sociales et d’aide à la personne.
       </p>
 
