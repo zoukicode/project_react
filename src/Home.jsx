@@ -73,10 +73,10 @@ export function Home() {
         <section id='qui_somme_nous' class="lg:flex-row  flex flex-col gap-40 flex-col-reverse justify-around items-center ">
         <motion.div
             initial={{x:-150,opacity:0}}
-            viewport={{amount:0.8}}
+            viewport={{once:true, amount:0.8}}
             whileInView={{x:0,opacity:1}}
             transition={{type:'spring',duration:0.6}}
-            className='lg:w-[40%] w-[95%] mx-auto'
+            className='lg:w-[40%] w-[90%] mx-auto'
             >
                 <h1 style={{fontSize:50}}>Humilité, dignité , partage</h1>
                 <p style={{fontSize:20}}>Aidons les femmes les plus démunies à conserver un peu leurs féminités</p>
