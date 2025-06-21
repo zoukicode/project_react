@@ -101,7 +101,7 @@ export function Home() {
           <div style={{
             position: "absolute",
             top: 0, left: 0, right: 0, bottom: 0,
-            clipPath: `path("...")`,
+               clipPath: path("M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"),
             background: `linear-gradient(306deg, #FF05B4, hsl(10, 100%, 50%))`
           }} />
 
@@ -128,24 +128,46 @@ export function Home() {
           transition={{ type: 'spring', duration: 0.6 }}
           className="overflow-hidden flex flex-col gap-[10px] absolute right-0"
         >
-          <div className="reseau">{/* Facebook */}<svg>...</svg></div>
-          <div className="reseau">{/* YouTube */}<svg>...</svg></div>
-          <div className="reseau">{/* Instagram */}<svg>...</svg></div>
+          <div className="reseau">{/* Facebook */}
+            <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    fill="#ffffff"
+    stroke="#ffffff"
+    width="25"
+    height="20"
+  >
+    <path d="M19 6h5V0h-5c-5.5 0-9 3.5-9 9v3H5v6h5v14h6V18h5l1-6h-6v-3c0-1.5.5-3 3-3z"/>
+  </svg>
+          </div>
+          <div className="reseau">{/* YouTube */}
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#FF05B4"   width="25"
+    height="25">
+  <path 
+    d="M43.1124,14.394a5.0056,5.0056,0,0,0-3.5332-3.5332c-2.3145-.8936-24.7326-1.3314-31.2358.0256A5.0059,5.0059,0,0,0,4.81,14.42c-1.0446,4.583-1.1239,14.4914.0256,19.1767A5.006,5.006,0,0,0,8.369,37.13c4.5829,1.0548,26.3712,1.2033,31.2358,0a5.0057,5.0057,0,0,0,3.5332-3.5333C44.2518,28.6037,44.3311,19.31,43.1124,14.394Z" 
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path 
+    d="M30.5669,23.9952,20.1208,18.004V29.9863Z" 
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+          </div>
+          <div className="reseau">{/* Instagram */}
+            <svg viewBox="0 -0.5 25 25"   width="25"
+    height="25" fill="#ffffff"  xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 5H9.5C7.29086 5 5.5 6.79086 5.5 9V15C5.5 17.2091 7.29086 19 9.5 19H15.5C17.7091 19 19.5 17.2091 19.5 15V9C19.5 6.79086 17.7091 5 15.5 5Z" stroke="#FF05B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 15C10.8431 15 9.5 13.6569 9.5 12C9.5 10.3431 10.8431 9 12.5 9C14.1569 9 15.5 10.3431 15.5 12C15.5 12.7956 15.1839 13.5587 14.6213 14.1213C14.0587 14.6839 13.2956 15 12.5 15Z" stroke="#FF05B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <rect x="15.5" y="9" width="2" height="2" rx="1" transform="rotate(-90 15.5 9)" fill="#ffffff"></rect> <rect x="16" y="8.5" width="1" height="1" rx="0.5" transform="rotate(-90 16 8.5)" stroke="#FF05B4" stroke-linecap="round"></rect> </g></svg>
+          </div>
         </motion.div>
 
       </section>
 
       {/* -------- SECTION : NOTRE DÉMARCHE -------- */}
       <section className='flex flex-col gap-10' id="demarche">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.8 }}
-          transition={{ duration: 1, type: "spring" }}
-        >
-          <h1 className="font-bold text-2xl">Notre démarche</h1>
-          <p>Fémininité sans abri lutte contre la précarité en distribuant des kits d’hygiène aux plus démunies.</p>
-        </motion.div>
+      
 
         {/* Composant Démarche */}
         <div><Demarche /></div>
