@@ -91,7 +91,7 @@ export function Home() {
       </header>
 
       {/* -------- SECTION DE PRÉSENTATION -------- */}
-      <section id='qui_somme_nous' className="lg:flex-row flex flex-col gap-40 flex-col-reverse justify-around items-center">
+      <section id='qui_somme_nous' className="lg:flex-row flex flex-col gap-10 flex-col-reverse justify-around items-center">
         
         {/* Texte d’introduction avec animation à l'apparition */}
         <motion.div
