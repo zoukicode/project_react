@@ -1,13 +1,18 @@
 import { motion, useMotionValue, animate } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
+/**
+ * Composant principal "Compte"
+ * Affiche des statistiques animées avec Framer Motion
+ */
 export function Compte() {
   return (
-    <div className='py-15'>
-      <h1 className="font-bold text-2xl">
-        Féminité sans abri c'est aussi...
+    <div className="py-16 px-6" id="compte">
+      <h1 className="font-bold text-2xl text-center mb-10 text-[#e7009a]">
+        Féminité sans abri, c'est aussi...
       </h1>
-      <div className="flex justify-between flex-wrap">
+
+      <div className="flex justify-center flex-wrap gap-8">
         {statistique.map((element, index) => (
           <AnimatedStat
             key={index}
@@ -20,17 +25,20 @@ export function Compte() {
   );
 }
 
+/**
+ * Composant enfant pour l'animation d'un nombre
+ */
 function AnimatedStat({ nombre, description }) {
   const valeur = useMotionValue(0);
   const [affichage, setAffichage] = useState(0);
   const valeurFinale = parseFloat(nombre.replace(',', '.'));
 
   const animer = () => {
-    valeur.set(0); // Remettre à zéro à chaque entrée
+    valeur.set(0); // Redémarre l'animation
     animate(valeur, valeurFinale, {
       duration: 2,
       onUpdate: (v) => {
-        setAffichage(Number(v).toFixed(2));
+        setAffichage(Number(v).toFixed(0)); // Affiche sans décimale
       },
     });
   };
@@ -38,21 +46,18 @@ function AnimatedStat({ nombre, description }) {
   return (
     <motion.div
       onViewportEnter={animer}
-      viewport={{ once: false, amount: 0.6 }}
-      style={{
-        textAlign: "center",
-        margin: "20px",
-        minWidth: "150px",
-      }}
+      viewport={{ once: true, amount: 0.6 }}
+      className="text-center min-w-[150px]"
     >
-      <motion.h1 style={{ color: "rgb(231, 0, 154)", fontSize:"30px" }}>
-        {affichage}
+      <motion.h1 className="text-[#e7009a] text-3xl font-bold">
+        {new Intl.NumberFormat('fr-FR').format(affichage)}
       </motion.h1>
-      <p style={{ opacity: 0.8 }}>{description}</p>
+      <p className="text-gray-700 opacity-80">{description}</p>
     </motion.div>
   );
 }
 
+// Données des statistiques
 const statistique = [
   { nombre: "47.302", description: "Kits femme distribués" },
   { nombre: "7.302", description: "Kits hommes distribués" },

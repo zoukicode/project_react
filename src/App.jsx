@@ -1,18 +1,13 @@
-import { motion } from "framer-motion";
-import { Home } from "./Home.jsx";
+import React from "react";
+import { Home } from "./Home.jsx"; // Import du composant principal de la page d’accueil
 
-import React, { useState } from "react";
-
+// Composant racine de l'application
 const App = () => {
-
-return(
-  <div>
-    <Home/>
-  </div>
-)
+  return (
+    <div className="min-h-screen">
+      <Home />
+    </div>
+  );
 };
 
-
-
 export default App;
-

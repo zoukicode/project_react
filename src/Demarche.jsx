@@ -4,15 +4,25 @@ import trash from './assets/trash.png';
 import travelers from './assets/undraw_travelers_kud9.svg';
 import learning from './assets/Learning-pana.svg';
 
+/**
+ * Composant principal pour afficher la démarche de l'association
+ */
 export function Demarche() {
   return (
-    <>
+    <section id="demarche" className="py-16 px-6">
+      <h2 className="text-center text-2xl font-bold text-[#e7009a] mb-10">
+        Notre démarche
+      </h2>
       <ActionsSection />
-    </>
+    </section>
   );
 }
 
+/**
+ * Composant secondaire pour afficher les différentes étapes de la démarche
+ */
 const ActionsSection = () => {
+  // Données des actions
   const actions = [
     {
       title: 'Nous luttons contre le gaspillage',
@@ -32,27 +42,31 @@ const ActionsSection = () => {
   ];
 
   return (
-      <motion.div className="md:flex-row md:justify-around flex flex-wrap gap-y-10 justify-center items-center ">
-        {actions.map((action, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{once:true, amount: 0.8 }}
-            transition={{
-              type: 'spring',
-              duration: 1,
-              delay: index * 0.4,
-            }}
-            className="action_item"
-          >
-            <div className="actions_grid_item">
-              <img src={action.image} alt="" className="action_image" />
-            </div>
-            <h3 className="action-title">{action.title}</h3>
-            <p className="action-description">{action.description}</p>
-          </motion.div>
-        ))}
-      </motion.div>
+    <motion.div className="flex flex-wrap justify-center gap-10">
+      {actions.map((action, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{
+            type: 'spring',
+            duration: 1,
+            delay: index * 0.3,
+          }}
+          className="w-[280px] flex flex-col items-center text-center"
+        >
+          <div className="w-[130px] h-[130px] bg-[#e992cf] rounded-full flex items-center justify-center mb-5">
+            <img
+              src={action.image}
+              alt={action.title}
+              className="w-full h-full object-cover p-3"
+            />
+          </div>
+          <h3 className="font-bold text-lg mb-2">{action.title}</h3>
+          <p className="text-sm text-gray-700 opacity-80">{action.description}</p>
+        </motion.div>
+      ))}
+    </motion.div>
   );
 };

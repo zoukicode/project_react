@@ -1,12 +1,18 @@
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
-export  function CommentNousAider() {
+/**
+ * Composant CommentNousAider
+ * Affiche trois cartes avec des animations Framer Motion pour illustrer
+ * comment les utilisateurs peuvent contribuer à l'association.
+ */
+export function CommentNousAider() {
+  // Liste des types d'aide avec titre, description et image
   const aides = [
     {
       titre: "Donner des produits",
       description:
         "La générosité des donateurs est essentielle pour le fonctionnement des Restos. Sans les dons, nous ne pourrions pas assurer nos missions sociales.",
-      image: "https://cdn-icons-png.flaticon.com/512/1046/1046857.png", // Remplace avec une image appropriée si besoin
+      image: "https://cdn-icons-png.flaticon.com/512/1046/1046857.png",
     },
     {
       titre: "Devenir bénévole",
@@ -23,45 +29,38 @@ export  function CommentNousAider() {
   ];
 
   return (
-    <section className="flex flex-col gap-5 py-10"  id="aide">
+    <section className="flex flex-col gap-5 py-10" id="aide">
+      
+      {/* Titre principal */}
       <h1 className="text-[#333] font-bold text-2xl text-center">
         Comment nous aider ?
       </h1>
-      <div  className="flex justify-around gap-[30px] flex-wrap items-center">
+
+      {/* Grille des cartes */}
+      <div className="flex justify-around gap-[30px] flex-wrap items-center">
         {aides.map((aide, index) => (
           <motion.div
-          key={index}
-          initial={{
-            opacity: 0,
-            scale:0
-          }}
-          whileInView={{
-            opacity: 1,
-            scale:1
-          }}
-          transition={{
-            duration: 1,
-            type: "spring",
-            delay:index + 0.3
-          }}
-          viewport={{ once: true, amount: 0.8 }}
-          style={{
-            backgroundColor: "#fff",
-            borderRadius: "12px",
-            padding: "20px",
-            maxWidth: "300px",
-            textAlign: "center",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-          }}
-          className='flex flex-col items-center'
-        >
+            key={index}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 1,
+              type: "spring",
+              delay: index * 0.3, // effet de cascade
+            }}
+            viewport={{ once: true, amount: 0.8 }}
+            className="flex flex-col items-center p-5 max-w-[300px] text-center bg-white rounded-xl shadow-md"
+          >
+            {/* Image illustrant l'action */}
             <img
               src={aide.image}
               alt={aide.titre}
-              style={{ width: "80px", height: "80px", objectFit: "contain", marginBottom: "15px" }}
+              className="w-20 h-20 object-contain mb-4"
             />
-            <h3 style={{ color: "#e7009a", fontSize: "1.2rem" }}>{aide.titre}</h3>
-            <p style={{ fontSize: "0.95rem", opacity: 0.8 }}>{aide.description}</p>
+
+            {/* Titre et description */}
+            <h3 className="text-[#e7009a] text-lg font-semibold mb-2">{aide.titre}</h3>
+            <p className="text-sm text-gray-700 opacity-80">{aide.description}</p>
           </motion.div>
         ))}
       </div>

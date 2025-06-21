@@ -1,41 +1,98 @@
+/* Importation de Tailwind CSS */
 @import "tailwindcss";
-body{
-  padding: 0;margin: 0;
+
+/* Style global du corps de la page */
+body {
+  padding: 0;
+  margin: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}*{
+}
+
+/* Boîte de modélisation universelle */
+* {
   box-sizing: border-box;
 }
-ul li{
+
+/* Les éléments de liste sont cliquables */
+ul li {
   cursor: pointer;
 }
-button{background-color:#FF05B4;color:white; padding:10px;border:none;outline:none;border-radius:5px;cursor: pointer}
-.reseau{background-color: #FF05B4;border-radius :50%;padding:5px;display: flex;justify-content: center;align-items: center;}
-#demarche{
+
+/* Style de base des boutons */
+button {
+  background-color: #FF05B4; /* Rose vif */
+  color: white;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style spécifique pour les icônes de réseaux sociaux */
+.reseau {
+  background-color: #FF05B4;
+  border-radius: 50%; /* Cercle parfait */
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Section #demarche positionnée plus bas sur la page */
+#demarche {
   position: relative;
   top: 200px;
   text-align: center;
 }
 
-.action_image{
+/* Image dans une action : occupe tout l'espace disponible */
+.action_image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Remplit sans déformer */
 }
-.action_item{
- width: 300px;display: flex;flex-direction: column;justify-content: center;align-items: center;align-content: center;align-self: center;
+
+/* Conteneur pour un élément d'action */
+.action_item {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
 }
-.actions_grid_item{
-  background-color: #e992cf;display: flex;justify-content: center;align-items: center;align-content: center;border-radius: 50%;
+
+/* Élément circulaire contenant une action */
+.actions_grid_item {
+  background-color: #e992cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 50%; /* Cercle */
   width: 130px;
   height: 130px;
 }
-.actions_grid{
-  display: flex;flex-direction: row;justify-content: space-around;align-items: center;align-content:center ;
 
+/* Grille contenant les éléments d'action */
+.actions_grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
 }
-#compte{
+
+/* Section avec forme polygonale personnalisée */
+#compte {
   clip-path: polygon(0% 0%, 100% 13%, 100% 50%, 100% 86%, 0% 100%);
   width: 100%;
-  background-color: rgb(253, 225, 244);
+  background-color: rgb(253, 225, 244); /* Rose clair */
 }
-button:hover{scale: 10px;}
+
+/* Effet au survol des boutons */
+button:hover {
+  transform: scale(1.1); 
+}
