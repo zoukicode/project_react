@@ -9,7 +9,7 @@ import learning from './assets/Learning-pana.svg';
  */
 export function Demarche() {
   return (
-    <section id="demarche" className=" px-4">
+    <section id="demarche" className="px-6">
    <h1 className="font-bold text-2xl">Notre démarche</h1>
              <p className='lg:w-[60%] mx-auto'>Fémininité sans abri lutte contre la précarité en distribuant des kits d’hygiène aux plus démunies.</p>
       <ActionsSection />
@@ -55,14 +55,14 @@ const ActionsSection = () => {
           }}
           className="w-[280px] flex flex-col items-center text-center"
         >
-          <div className="w-[130px] h-[130px] bg-[#e992cf] rounded-full flex items-center justify-center mb-5">
+          <div className="w-[130px] h-[130px] bg-[#e992cf] rounded-full flex items-center justify-center ">
             <img
               src={action.image}
               alt={action.title}
               className="w-full h-full object-cover p-3"
             />
           </div>
-          <h3 className="font-bold text-lg mb-2">{action.title}</h3>
+          <h3 className="font-bold text-lg ">{action.title}</h3>
           <p className="text-sm text-gray-700 opacity-80">{action.description}</p>
         </motion.div>
       ))}

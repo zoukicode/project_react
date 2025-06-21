@@ -187,7 +187,7 @@ export function Home() {
       </section>
 
       {/* -------- SECTION : NOTRE DÉMARCHE -------- */}
-      <section  id="demarche">
+      <section className='flex flex-col gap-10' id="demarche">
       
 
         {/* Composant Démarche */}
