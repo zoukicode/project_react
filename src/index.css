@@ -41,8 +41,6 @@ button {
 
 /* Section #demarche positionnée plus bas sur la page */
 #demarche {
-  position: relative;
-  top: 200px;
   text-align: center;
 }
 
