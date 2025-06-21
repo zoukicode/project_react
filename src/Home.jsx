@@ -144,7 +144,7 @@ export function Home() {
           transition={{ duration: 1, type: "spring" }}
         >
           <h1 className="font-bold text-2xl">Notre démarche</h1>
-          <p>Fémininité sans abri lutte contre la précarité en distribuant des kits d’hygiène aux plus démunies.</p>
+          <p className='lg:w-[60%]'>Fémininité sans abri lutte contre la précarité en distribuant des kits d’hygiène aux plus démunies.</p>
         </motion.div>
 
         {/* Composant Démarche */}

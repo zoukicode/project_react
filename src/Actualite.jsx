@@ -1,22 +1,22 @@
 // Données des articles de blog à afficher
 const table = [
   {
-    titre: "Nom du blog",
+    titre: "Amour",
     Image: "https://th.bing.com/th/id/OIP.FCAcMIctyKJ2-y7quox0LgHaE5?w=247&h=180&c=7&r=0&o=5&pid=1.7",
     description: "Féminisme ou féminiphilie ou amour"
   },
   {
-    titre: "Nom du blog",
+    titre: "La femme dans la société",
     Image: "https://th.bing.com/th/id/OIP.wus4pKqXCtsS59mMF7S-6AHaE8?w=235&h=180&c=7&r=0&o=5&pid=1.7",
     description: "Féminisme pour embellir nos vies"
   },
   {
-    titre: "Nom du blog",
+    titre: "Emancipation de la femme",
     Image: "https://th.bing.com/th/id/OIP.0SIlEL56XdKDdG4gyE0p5AHaEt?w=286&h=182&c=7&r=0&o=5&pid=1.7",
     description: "En crise existentielle : le féminisme"
   },
   {
-    titre: "Nom du blog",
+    titre: "Humoure",
     Image: "https://th.bing.com/th/id/OIP.wrfou9OQ3NoenD1cHSFQhQHaKR?w=125&h=180&c=7&r=0&o=5&pid=1.7",
     description: "Bénévoles"
   }
@@ -29,11 +29,11 @@ export function Actualite() {
       
       {/* Titre de la section */}
       <h1 className="font-bold text-2xl">
-        Féminité sans abri, c'est aussi...
+        Actualité
       </h1>
 
       {/* Texte d’introduction */}
-      <p>
+      <p className="lg:w-[60%]">
         S'engager aux côtés des féminités sans abri, c'est permettre à l'association de continuer à bénéficier de soutien tout au long de l'année pour assurer ses missions sociales et d’aide à la personne.
       </p>
 
