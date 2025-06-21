@@ -20,6 +20,11 @@ function charge_page_dom(){
 }
 
 export function Home() {
+
+          // pour le scrolle
+   const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
   const [chargement , setchargement] = useState(false)
     return (
       <section className='flex flex-col gap-10'>
@@ -62,10 +67,10 @@ export function Home() {
    {/* navigation */}
           <div>
             <ul class="flex gap-5 liste-none items-center hidden md:flex ">
-              <li><a href="#qui_somme_nous">Qui sommes nous ?</a></li>
-              <li><a href="#aide">Nous soutenir</a></li>
-              <li><a href="#actualite">Nos actualités</a></li>
-              <li><button>Espace bénévolats</button></li>
+              <li onClick={()=>{scrollToSection("qui_somme_nous")}}>Qui sommes nous ?</li>
+              <li onClick={()=>{scrollToSection("aide")}}>Nous soutenir</li>
+              <li onClick={()=>{scrollToSection("actualite")}}>Nos actualités</li>
+              <li onClick={()=>{scrollToSection("qui_somme_nous")}}><button>Espace bénévolats</button></li>
             </ul>
           </div>
         </header>
@@ -193,7 +198,7 @@ export function Home() {
 < Demarche />
 </div>
 {/* section pour les décomptes */}
-<div id="compte">
+<div id="compte" >
 < Compte />
 </div>
 {/* section pour les actualité */}
