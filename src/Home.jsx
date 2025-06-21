@@ -70,7 +70,7 @@ export function Home() {
           </div>
         </header>
         {/* debut , description */}
-        <section id='qui_somme_nous' class="lg:flex-row  flex flex-col flex-col-reverse justify-around items-center ">
+        <section id='qui_somme_nous' class="lg:flex-row  flex flex-col gap-20 flex-col-reverse justify-around items-center ">
         <motion.div
             initial={{x:-150,opacity:0}}
             viewport={{amount:0.8}}
@@ -186,7 +186,7 @@ export function Home() {
             viewport={{once:true, amount:0.8}}
             transition={{duration:1,type:"spring"}}
             >
-                <h1 className="font-bold text-3xl">Notre démarche</h1>
+                <h1 className="font-bold text-2xl">Notre démarche</h1>
                 <p>Fémininité sans abri lutte contre la précarité, e, constante augmentation en distribuants des kits hygiène au personnes les plus démunies</p>
             </motion.div>
 <div>
