@@ -5,8 +5,8 @@ body{
 }*{
   box-sizing: border-box;
 }
-ul a{
-  text-decoration: none;
+ul li{
+  cursor: pointer;
 }
 button{background-color:#FF05B4;color:white; padding:10px;border:none;outline:none;border-radius:5px;cursor: pointer}
 .reseau{background-color: #FF05B4;border-radius :50%;padding:5px;display: flex;justify-content: center;align-items: center;}
@@ -38,4 +38,4 @@ button{background-color:#FF05B4;color:white; padding:10px;border:none;outline:no
   width: 100%;
   background-color: rgb(253, 225, 244);
 }
-
+button:hover{scale: 10px;}
