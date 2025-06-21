@@ -25,7 +25,7 @@ const table = [
 // Composant principal
 export function Actualite() {
   return (
-    <div className="px-10 flex flex-col gap-5" id="actualite">
+    <div className="px-10 flex flex-col items-center gap-5" id="actualite">
       
       {/* Titre de la section */}
       <h1 className="font-bold text-2xl">
