@@ -9,7 +9,7 @@ import learning from './assets/Learning-pana.svg';
  */
 export function Demarche() {
   return (
-    <section id="demarche" className="flex flex-col gap-5 mt-16 px-6">
+    <section id="demarche" className="flex flex-col gap-5 mt-20 px-2">
    <h1 className="font-bold text-2xl">Notre démarche</h1>
       <ActionsSection />
     </section>
